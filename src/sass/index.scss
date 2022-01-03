@@ -2,6 +2,8 @@
 @import "roulette.scss";
 @import "header-footer.scss";
 @import url("./participants-list.scss");
+@import url(../sass/header.scss);
+@import url(../sass/footer.scss);
 
 *{
 	margin: 0;
@@ -14,6 +16,7 @@
 
 body{
 	background-image: url("../assets/background-img.jpg");
+    background-image: url("../assets/images/background/background-img.jpg");
     background-position: center center;
     height: 1200px;
     background-attachment: fixed;
