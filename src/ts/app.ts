@@ -7,6 +7,4 @@ function app(){
     notRead();
 /*     chooseRandomParticipant(); */
 }
-
 app();
-

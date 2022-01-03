@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* import {fillRoulette} from "./roulette"; */
 
 let participantsList = [];
@@ -91,10 +92,17 @@ function fillRoulette(participantsValue){
 //ctx.rotate(degrees*Math.PI/180)
 } 
 
+=======
+let list:any[] = [];
+const inputParticipants = (<HTMLInputElement>document.getElementById('input-add-participants'));
+const btnAddParticipants = (<HTMLInputElement>document.getElementById('btn-add-participants'));
+
+>>>>>>> origin/feature/ileen-ignacio_members-categories
 export function addParticipants(){
 
     let participantsValue= inputParticipants.value;
 
+<<<<<<< HEAD
     if (participantsValue !== '' && participantsList.includes(participantsValue) == false) {
         copyList.push(participantsValue);
         participantsList.push(participantsValue);
@@ -190,3 +198,19 @@ function startRoulette ()
 
 
 startBtn.addEventListener('click',startRoulette );
+=======
+    if (participantsValue !== '' && list.includes(participantsValue) == false) {
+       list.push(participantsValue);
+       console.log(list);
+          inputParticipants.value = '';
+        inputParticipants.placeholder = 'Insert a valid name';
+        console.log('connected 2');
+    }
+}
+
+export function btnCall(){
+    btnAddParticipants.addEventListener('click', addParticipants);
+}
+
+console.log('connected 1');
+>>>>>>> origin/feature/ileen-ignacio_members-categories

@@ -6,16 +6,24 @@ template-borders{
     @extend template-borders;
     width: 250px;
     height: 30px;
+<<<<<<< HEAD
     margin: 7%;
     background-color: rgba(177, 119, 63, 90%);
     text-align: center;
     background-color: none;
+=======
+    background-color: rgba(177, 119, 63, 90%);
+    text-align: center;
+>>>>>>> origin/feature/ileen-ignacio_members-categories
 
     #btn-add-participants{
         @extend template-borders;
         padding: 7.5px;
         background-color:brown;
+<<<<<<< HEAD
         
+=======
+>>>>>>> origin/feature/ileen-ignacio_members-categories
     }
 
     #btn-add-participants:hover{
