@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-/* import {fillRoulette} from "./roulette"; */
+/* import {fillRoulette} from "./roulette";
 
 let participantsList = [];
 let copyList = [];
@@ -9,17 +8,17 @@ const inputParticipants = (<HTMLInputElement>document.getElementById('input-add-
 const btnAddParticipants = (<HTMLInputElement>document.getElementById('btn-add-participants'));
 
 const startBtn=document.getElementById("start-btn"); 
-const restartBtn=document.getElementById("restart-btn");///////////////////
+const restartBtn=document.getElementById("restart-btn");
 
 let participantsNumber = participantsList.length;// nº elementos array = nº participantes
 let participantPosition = participantsList.indexOf(''); // calcula la posición del nombre dado en el array
-/* let whatNameThere = participantsList.charAt(0); / calcula nombre de la posición dada	 */ ///////////////////
+let whatNameThere = participantsList.charAt(0); / calcula nombre de la posición dada
 let participantArea = 360/participantsNumber; // calcula el area (grados) que se asigna a cada participante
 let participantCoordinates = participantArea*participantPosition; // calcula la posición del nombre dado en el canvas ruleta ///////////////////
 
 
 console.log(participantsNumber + ' participantes iniciales'); 
-/* console.log(participantPosition + ' posición ejemplo en el array');  */
+console.log(participantPosition + ' posición ejemplo en el array');
 let chosen
 
 let canvas=document.getElementById("idcanvas") as HTMLCanvasElement; 
@@ -30,8 +29,7 @@ let initialPosition;
 let movement;
  
 
-export function deleteChosenParticipant (chosen)
-{
+export function deleteChosenParticipant (chosen){
 	if(copyList.includes(chosen) == true){
 		console.log(":(((");
 		let chosenSacrifice = copyList.splice(copyList.indexOf(chosen),1);
@@ -46,14 +44,14 @@ export function deleteChosenParticipant (chosen)
 		console.log(chosen + ':(');
 
 }
-/////////////
+
 function changeVar (chosenParticipant){
     chosen = chosenParticipant;
 }
 
 function fillRoulette(participantsValue){
 
-	/* copyList.push(participantsValue); */
+	copyList.push(participantsValue);
 
 	for (var i = 0; i < copyList.length; i++) {
 		
@@ -88,21 +86,18 @@ function fillRoulette(participantsValue){
         context.restore();
 	}
 
-//ctx.arc(centreX, centreY, radius, startAngle, endAngle, false); 
-//ctx.rotate(degrees*Math.PI/180)
+ctx.arc(centreX, centreY, radius, startAngle, endAngle, false); 
+ctx.rotate(degrees*Math.PI/180)
 } 
 
-=======
 let list:any[] = [];
 const inputParticipants = (<HTMLInputElement>document.getElementById('input-add-participants'));
 const btnAddParticipants = (<HTMLInputElement>document.getElementById('btn-add-participants'));
 
->>>>>>> origin/feature/ileen-ignacio_members-categories
 export function addParticipants(){
 
     let participantsValue= inputParticipants.value;
 
-<<<<<<< HEAD
     if (participantsValue !== '' && participantsList.includes(participantsValue) == false) {
         copyList.push(participantsValue);
         participantsList.push(participantsValue);
@@ -121,16 +116,12 @@ export function addParticipants(){
 }
 
 
-////////////////////////////////////////////////////////////////// Btn - Añadir participantes *
 export function btnCall()
 {
     btnAddParticipants.addEventListener('click', addParticipants);
     console.log('¡Botón activo: Añade un participante!');
 }
-//////////////////////////////////////////////////////////////////
 
-
-///////////
 
 function choseRandomParticipant (participantsList) {
     let participantsValue= inputParticipants.value;
@@ -143,7 +134,7 @@ function choseRandomParticipant (participantsList) {
         participantArea = 360/participantsNumber; 
         let chosenParticipant = participantsList[Math.floor(Math.random()*participantsList.length)];
         console.log(chosenParticipant + ' participante al azar');
-        /* deleteChosenParticipant (chosenParticipant); */
+        deleteChosenParticipant (chosenParticipant);
 
         participantPosition = participantsList.indexOf(chosenParticipant)
         console.log(participantPosition + ' su posición en el array');
@@ -159,9 +150,6 @@ function choseRandomParticipant (participantsList) {
 }
 
 
-///////////////////
- 
-
 
 function startRoulette ()
 {
@@ -171,8 +159,7 @@ function startRoulette ()
         let player
         movement = setInterval(function(){
             initialPosition+=20;
-            canvas.style.transform='rotate('+initialPosition+'deg)';///////////////////
-       /*      canvas.style.transform = `rotate(${participantCoordinates}deg)`; */
+            canvas.style.transform='rotate('+initialPosition+'deg)';
             timer--;
             if(timer<=0){
                 clearInterval(movement);
@@ -188,7 +175,7 @@ function startRoulette ()
             
         },100);
 
-        /* changeVar (chosen) */
+        changeVar (chosen)
          deleteChosenParticipant (chosen)
       }  
 
@@ -198,7 +185,6 @@ function startRoulette ()
 
 
 startBtn.addEventListener('click',startRoulette );
-=======
     if (participantsValue !== '' && list.includes(participantsValue) == false) {
        list.push(participantsValue);
        console.log(list);
@@ -213,4 +199,6 @@ export function btnCall(){
 }
 
 console.log('connected 1');
->>>>>>> origin/feature/ileen-ignacio_members-categories
+export function addParticipants() : void{
+    console.log('connected 2');
+} */
